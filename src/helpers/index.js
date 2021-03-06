@@ -1,3 +1,5 @@
+import ar from "./ar";
+
 const module11 = (idNumber) => {
   let rest = idNumber.split("").map(Number).reverse();
   let total = rest.reduce(
@@ -8,6 +10,4 @@ const module11 = (idNumber) => {
   return 11 - (total % 11);
 };
 
-module.exports = {
-  module11,
-};
+export { ar, module11 };

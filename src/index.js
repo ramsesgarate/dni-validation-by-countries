@@ -1,4 +1,4 @@
-var ar = require("./ar/index");
-var cl = require("./cl/index");
+import ar from "./ar/index";
+import cl from "./cl/index";
 
-module.exports = { ar, cl };
+export { ar, cl };
