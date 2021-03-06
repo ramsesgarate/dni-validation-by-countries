@@ -19,7 +19,7 @@
     "countries"
   ],
   "author": "'Ramses <'hello@ramsesgarate.com'>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ramsesgarate/dni-validation-by-countries/issues"
   },
