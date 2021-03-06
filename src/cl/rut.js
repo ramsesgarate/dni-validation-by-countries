@@ -22,7 +22,7 @@ const _checksumIsOk = (rut) => {
     case 10:
       return checkDigit === "k" || checkDigit === "K";
     default:
-      return checkDigit === mod11;
+      return checkDigit == mod11;
   }
 };
 
