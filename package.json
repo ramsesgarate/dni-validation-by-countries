@@ -2,12 +2,13 @@
   "name": "dni-validation-by-countries",
   "version": "1.0.0",
   "description": "DNI validation formula for various countries.",
-  "main": "dist/dni-validation-by-countries.js",
+  "main": "dist/index.js",
   "scripts": {
     "commit": "cz",
     "test": "node ./test/index.js",
     "prepare": "husky install",
-    "build": "webpack --mode production"
+    "prebuild": "rimraf dist",
+    "build": "babel --out-dir dist src"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,14 @@
   "keywords": [
     "dni",
     "validations",
-    "countries"
+    "countries",
+    "cuit",
+    "cuil",
+    "rut"
+  ],
+  "file": [
+    "dist",
+    "README.md"
   ],
   "author": "'Ramses <'hello@ramsesgarate.com'>",
   "license": "MIT",
@@ -25,12 +33,14 @@
   },
   "homepage": "https://github.com/ramsesgarate/dni-validation-by-countries#readme",
   "devDependencies": {
-    "@babel/cli": "7.13.0",
-    "@babel/core": "7.13.8",
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-2": "6.24.1",
     "cz-conventional-changelog": "3.3.0",
     "husky": "5.1.3",
     "jest": "26.6.3",
     "jest-extended": "0.11.5",
+    "rimraf": "3.0.2",
     "webpack": "5.24.3",
     "webpack-cli": "4.5.0"
   },
@@ -38,5 +48,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
   }
 }
